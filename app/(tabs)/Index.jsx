@@ -41,7 +41,7 @@ export default function App() {
 
             const data = await response.json();
             setMensagem("Cadastro realizado com sucesso!");
-            // Limpar o formulário após o sucesso
+           
             setFormData({
                 name: '',
                 email: '',
