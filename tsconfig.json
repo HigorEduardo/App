@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "app/(tabs)/Lista.jsx", "app/(tabs)/Gradiente.jsx"  ]
+, "app/(tabs)/Pages/Lista.jsx", "app/(tabs)/Pages/Gradiente.jsx"  ]
 }

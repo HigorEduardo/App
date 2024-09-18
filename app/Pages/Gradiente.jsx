@@ -27,10 +27,8 @@ export default splashScreen = function () {
       colors={['#f2b765', '#8a4b2c','#f2b765' ]} 
       style={style.container}
     >
-            <Image 
-            source={require('./Imagens/thelast.png')} style={style.Image}
-            />
-             </LinearGradient>
+           
+     </LinearGradient>
    
    
   );

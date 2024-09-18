@@ -51,7 +51,7 @@ const Santoandre = () => {
     };
     return (
         <View style={styles.container}>
-            <Image source={require('./Imagens/banco.png')} style={styles.Image} />
+           
             <View style={styles.saldoContainer}>
                 <Text style={styles.label}>Saldo Atual</Text>
                 <Text style={styles.valor}>R$ {saldo.toFixed(2)}</Text>

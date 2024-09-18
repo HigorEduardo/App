@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet,Image } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+
 
 
 const Pokemon = () => {
@@ -45,9 +45,6 @@ const Pokemon = () => {
     return (
     
         <View style={styles.container}>
-             <Image 
-            source={require('./Imagens/pokemon.png')} style={styles.Image}
-            />
         <View style={styles.container2}>
             <Text>Selecione o Tipo</Text>
             <Picker
