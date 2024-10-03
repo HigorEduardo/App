@@ -63,6 +63,9 @@ export default function Home() {
             <Link href="/Pages/iFome/home">
                 <Text style={styles.texto}>ifome</Text>
             </Link>
+            <Link href="/Pages/camera/Camera">
+                <Text style={styles.texto}>Camera</Text>
+            </Link>
         </View>
     );
 }
