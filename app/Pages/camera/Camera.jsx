@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { View, StyleSheet, Text, Image, Button } from 'react-native'
 import { CameraView, useCameraPermissions } from 'expo-camera'
+import * as MediaLibrary from 'expo-media-library'
 
 export default function Camera() {
     const [permissao, pedirPermissao] = useCameraPermissions()
@@ -32,22 +33,32 @@ export default function Camera() {
         setLado(lado == 'back' ? 'front' : 'back')
     }
 
+    const salvarfoto = () => {
+        MediaLibrary.saveToLibreryasync(foto.uri)
+        setFoto(null)
+    }
+
     return (
         <View style={style.container}>
             {foto ?
                 <View>
                     <Image source={{ uri: foto.uri }} style={style.foto} />
-                    <Button title="limpar foto" onPress={setFoto(null)}/>
+                    <Button title="limpar foto" onPress={() => setFoto(null)}/>
+                    <Button title="Salvar foto" onPress={salvarfoto}/>
                 </View> :
-                <CameraView facing={'lado'} style={style.camera} ref={cameraRef}>
-                    <Button title='tirar foto' onPress={tirarFoto} />
-                    <Button title='troca camera' onPress={trocaCamera} />
+                <CameraView 
+                facing={lado} 
+                style={style.camera} 
+                ref={cameraRef}
+                >
+                    <Button title='Tirar foto' onPress={tirarFoto} />
+                    <Button title='Troca camera' onPress={trocaCamera} />
                 </CameraView>
 
             }
         </View>
     )
-}
+}   
 
 const style = StyleSheet.create({
     container: {
