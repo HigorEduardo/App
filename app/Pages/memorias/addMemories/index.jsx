@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { View, Image, Pressable, SafeAreaView, StyleSheet, Text, TextInput, Button } from "react-native";
-import Bar from "../../../components/Bar";
+import Bar from "../../../../components/Bar";
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -70,7 +70,7 @@ const NewMemory = () => {
 
                 const jsonArray = JSON.stringify(array);
                 await AsyncStorage.setItem('Memories', jsonArray);
-                router.push('/Memories');
+                router.push('/Pages/memorias');
             } catch (e) {
                 console.log(e);
             }
@@ -81,9 +81,9 @@ const NewMemory = () => {
         <>
             <Bar
                 Titulo={'Adicionar Memória'}
-                href={'/Memories'}
+                href={'/Pages/memorias'}
                 icon={<Entypo name="chevron-left" size={24} color="white" />}
-                cor={'#6a994e'}
+                cor={'#4682B4'}
             />
             <SafeAreaView style={styles.container}>
                 {cameraActive ? (
@@ -124,14 +124,14 @@ const NewMemory = () => {
                                     style={styles.btnimg}
                                     onPress={pickImage}
                                 >
-                                    <FontAwesome name="photo" size={24} color="#6a994e" />
+                                    <FontAwesome name="photo" size={24} color="#4682B4" />
                                     <Text style={styles.pimg}>Adicionar foto</Text>
                                 </Pressable>
                                 <Pressable
                                     style={styles.btnimg}
                                     onPress={openCamera}
                                 >
-                                    <FontAwesome name="camera-retro" size={24} color="#6a994e" />
+                                    <FontAwesome name="camera-retro" size={24} color="#4682B4" />
                                     <Text style={styles.pimg}>Tirar foto</Text>
                                 </Pressable>
                             </View>
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     btn: {
-        backgroundColor: '#6a994e',
+        backgroundColor: '#4682B4',
         width: 340,
         padding: 10,
         borderRadius: 3,
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     pimg: {
-        color: '#6a994e',
+        color: '#4682B4',
         marginLeft: 6
     },
     camera: {
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     cameraButton: {
-        backgroundColor: '#6a994e',
+        backgroundColor: '#4682B4',
         position: 'absolute',
         bottom: 20,
         left: '50%',

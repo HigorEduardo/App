@@ -33,7 +33,7 @@ const MemoriesScreen = () => {
             />
             <SafeAreaView style={styles.container}>
                 <Pressable style={styles.addButton}>
-                    <Link href={'/Memories/addMemories'}>
+                    <Link href={'/Pages/memorias/addMemories'}>
                         <View style={styles.center}>
                             <Entypo name="plus" size={34} color="white" />
                         </View>
